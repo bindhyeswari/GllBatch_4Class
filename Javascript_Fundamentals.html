@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        // Object literal notation
+        var han = {
+            name: 'Han Ho',
+            area_of_study: 'UI Designer',
+            sayHello: function (){
+                console.log('Han says Hi!');
+            }
+        };
+
+        // access properties of an object
+        console.log(han['name']); // associative array notation
+        console.log(han.name); // via . operator
+        han.sayHello();
+
+        var x = 'Han Ho';
+        var y = ' is studying UI Design. ';
+        var z = x + y;
+
+        var student_names = 'Han, Hamid, Kim, Jacob';
+        var areas = 'UI Designer, UI Developer, UI Developer, UI Developer';
+        var split_data = student_names.split(', ');
+        var area_split = areas.split(', ');
+        var arr_of_student_objects = [];
+
+        console.log('split_data[0] : ' + split_data[0]);
+
+        for (var i = 0; i < split_data.length; i++){
+            console.log('This is loop ' + i);
+            var student_obj = {
+                name: split_data[i],
+                area_of_study: area_split[i]
+            };
+            console.log('split_data[i] is ' + split_data[i]);
+            console.log(student_obj);
+            arr_of_student_objects.push(student_obj);
+            console.log('pushed student object into arr_of_student_objects');
+        }
+
+
+
+        console.log(arr_of_student_objects);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
